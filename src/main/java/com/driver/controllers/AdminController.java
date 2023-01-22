@@ -2,13 +2,13 @@ package com.driver.controllers;
 
 import com.driver.model.Admin;
 import com.driver.model.Customer;
+import com.driver.model.Driver;
 import com.driver.services.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Driver;
 import java.util.List;
 
 
@@ -46,9 +46,9 @@ public class AdminController {
 	}
 
 	@GetMapping("/listOfDrivers")
-	public List<Driver> listOfDrivers() {
+	public List<com.driver.model.Driver> listOfDrivers() {
 
-		List<Driver> listOfDrivers=adminService.getListOfDrivers();
+		List<Driver> listOfDrivers = adminService.getListOfDrivers();
 		return listOfDrivers;
 	}
 }
